@@ -1,0 +1,7 @@
+<view class='ab-center' style='background-color: rgba(0, 0, 0, {{loadOpacity==""?0.5:loadOpacity}});'>
+  <view class='loading load-modal' wx:if="{{loadModal}}">
+    <view class='{{isLoading?"cuu-load cload-modal":""}}' style='border-left: 6rpx solid {{loadColor==""?"#000":loadColor}};' />
+    <image src='{{loadLogo==""?"logo.gif":loadLogo}}' class='png' mode='aspectFit'></image>
+    <view class='gray-text'>{{loadText==""?"加载中...":loadText}}</view>
+  </view>
+</view>

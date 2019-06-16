@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Home_Page/home",
+    "pages/Home_Page/classify",
+    "pages/Home_Page/my_info",
+    "pages/comic/comic_catagory",
+    "pages/comic/comic_page",
+    "pages/Home_Page/ranking_list",
+    "pages/Home_Page/search",
+    "pages/Home_Page/update",
+    "pages/feedback/feedback_index",
+    "utils/util",
+    "pages/feedback/help",
+    "pages/feedback/feedback_content",
+    "pages/upload/create_upload",
+    "pages/upload/manage_upload",
+    "pages/loading/loading"
+  ],
+  "cloud": true,
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Comic Captain",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-tab": "/dist/tab/index",
+    "van-tabs": "/dist/tabs/index"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#50b8ee",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home-active.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/Home_Page/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/classify-active.png",
+        "iconPath": "images/classify.png",
+        "pagePath": "pages/Home_Page/classify",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/my-active.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/Home_Page/my_info",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
