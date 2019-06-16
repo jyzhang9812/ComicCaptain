@@ -1,0 +1,76 @@
+<!--miniprogram/pages/Home_Page/home.wxml-->
+<view class='container'>
+  <view class='search_box'>
+    <icon type='search' color='#ffbf33' size='15'></icon>
+    <input confirm-type="search" maxlength="30" bindtap="search_page" placeholder='请输入作品名...'></input>
+  </view>
+  <view class='auto_pics'>
+    <swiper indicator-dots='true' autoplay='true' interval='3000' style='height:400rpx'>
+      <swiper-item><image src='{{onepiece}}'style='width:100%'></image></swiper-item>
+      <swiper-item><image src='{{girls}}' style='width:100%'></image></swiper-item>
+      <swiper-item><image src='{{chongshi}}'style='width:100%'></image></swiper-item>
+    </swiper>
+  </view>
+  <view class='btn_group'>
+    <view class='btn' bindtap='bindrank'>
+      <image class='icon' src='{{rocket}}'></image>
+      <text class='icon_text'>排行榜</text>
+    </view>
+    <view class='btn' bindtap='bindUpdate'>
+      <image class='icon' src='{{rocket2}}'></image>
+      <text class='icon_text'>最近更新</text>
+    </view>
+    <view class='btn' bindtap='bindTag'>
+      <image class='icon' src='{{galaxy}}'></image>
+      <text class='icon_text'>分类</text>
+    </view>
+  </view>
+  <view class='comic'>
+    <view class='banner'>
+      <text>最近更新</text>
+    </view>
+    <view class='card_group'>
+      <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{random_list}}' bindtap='bindCatalog' data-postId='{{comic._id}}' wx:for-item='comic'>
+        <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+        <view class='text-group'>
+          <text class='icon_text'>{{comic.title}}</text>
+          <text class='tag'>{{comic.tag}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='btn_group'>
+      <button class='btn0'bindtap='change'>
+        <image class='icon0' src='{{change}}'></image>
+        换一换
+      </button>
+      <button class='btn0' bindtap='bindUpdate'>
+        <image class='icon0' src='{{more}}'></image>
+        查看更多
+      </button> 
+    </view>
+    
+    <view class='banner'>
+      <text>最受好评</text>
+    </view>
+    <view class='card_group'>
+      <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{top_list}}' bindtap='bindCatalog' data-postId='{{comic._id}}' wx:for-item='comic'>
+        <image src='{{comic.img}}' mode='scaleToFill' class='card_image'></image>
+        <view class='text-group'>
+          <text class='icon_text'>{{comic.title}}</text>
+          <text class='tag'>{{comic.tag}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='btn_group'>
+      <button class='btn0' bindtap='change2'>
+        <image class='icon0' src='{{change}}'></image>
+        换一换
+      </button>
+      <button class='btn0' bindtap='bindrank'>
+        <image class='icon0' src='{{more}}'></image>
+        查看更多
+      </button>
+    </view>
+
+  </view>
+</view>

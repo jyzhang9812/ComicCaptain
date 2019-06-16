@@ -1,0 +1,23 @@
+<!--miniprogram/pages/Home_Page/ranking_list.wxml-->
+<view class='container'>
+  <view class='update_note'>
+    <text>每周五20：00更新</text>
+  </view>
+  <view class='rank_list'>
+    <view class='rank_card' wx:for='{{comic_list}}' wx:key='{{comic._id}}' bindtap='bindCatalog' data-postId='{{comic._id}}' wx:for-item='comic' bindtap='bindCatalog'>
+      <image class='cover' src='{{comic.img}}' mode='aspectFill'></image>
+      <view class='comicInfo'>
+        <text class='icon_text'>{{comic.title}}</text>
+        <text class='tag'>作者：{{comic.author}}</text>
+        <text class='tag'>状态：{{comic.state}}</text>
+        <text class='tag'>分类：{{comic.tag}}</text>
+      </view>
+      <view class='medal'>
+        <image class='icon' src='{{comic.medal}}'></image>
+      </view>
+    </view>
+  </view>
+  <view style='margin-bottom:20rpx;'>
+    <text class='tag'>最好的漫画，都是值得回味的。</text>
+  </view>
+</view>

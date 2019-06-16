@@ -1,0 +1,109 @@
+/* miniprogram/pages/Home_Page/home.wxss */
+.container{
+  padding-top:30rpx; 
+}
+text{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.search_box{
+  width: 90%;
+  height: 35rpx;
+  background-color: #faf9f9;
+  padding: 10rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+}
+input{
+  width: 100%;
+  height: 100%;
+  margin:0 20rpx; 
+  color: grey;
+  font-size: 30rpx;
+}
+.auto_pics{
+  width:100%;
+  margin: 30rpx auto;
+}
+.btn_group{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+navigator{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.btn0{
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  color: rgb(121, 121, 121);
+}
+.icon{
+    width:80rpx;
+    height:80rpx;
+    margin: 0 auto;
+}
+.icon0{
+    width:50rpx;
+    height:50rpx;
+    margin: 0 20rpx;
+}
+.icon_text{
+  font-size: 30rpx;
+  color: rgb(121, 121, 121);
+}
+.comic{
+  margin:30rpx auto; 
+  width: 100%;
+  border-top: 5rpx dashed #50b8ee; 
+}
+.banner{
+  text-align: center;
+  margin-top:30rpx;
+  font-size:35rpx;
+  color: rgb(70, 70, 70);
+}
+.card_group{
+  margin: 30rpx auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.comic_card{
+  margin:3rpx; 
+  width: 240rpx;
+  height: 400rpx;
+  border: 2rpx solid gainsboro;
+  box-shadow: 5px 10px 20px #e7e7e7;
+  display: flex;
+  flex-direction: column;
+}
+.card_image{
+  width: 100%;
+  height: 80%;
+}
+.text-group{
+  margin: 5rpx 10rpx 5rpx;
+  display: flex;
+  flex-direction: column;
+}
+.tag{
+  color: darkgrey;
+  font-size: 25rpx;
+}

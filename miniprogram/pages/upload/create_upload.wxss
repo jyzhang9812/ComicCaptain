@@ -1,0 +1,83 @@
+.container{
+  padding-top: 50rpx;
+}
+.input_view{
+  margin: 10rpx auto;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  font-size: 35rpx;
+  color: #ffbf35
+}
+.input{
+  font-size: 30rpx;
+  background-color: #f5f5f5;
+  color: #777;
+  min-height: 30rpx;
+  width: 200px;
+  height: auto;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+group{
+  width:200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.fl{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pic{
+  width: 64rpx;
+  height: 64rpx;
+  margin: 8px;
+}
+
+.w100{
+  width: 100%;
+}
+
+.publishItem{
+  margin-top: 80rpx;
+  height: 100rpx;
+  border-top: 1px solid #ffbf35;
+  border-bottom: 1px solid #ffbf35;
+}
+
+.pulishBtn{
+  width: 100rpx;
+  height: 50rpx;
+  border-radius:10rpx; 
+  color: #fff;
+  font-size: 28rpx;
+  background: #ffbf35;
+  text-align: center;
+  font-weight: bold;
+  margin: 15px auto;
+  line-height: 50rpx;
+}
+
+.h100{
+  height: 100rpx;
+}
+
+
+.imgUrlClass2{
+  width: 50%;
+}
+
+.imgUrlClass1{
+  width: 100%;
+}
+
+
+.imgUrlClass3{
+  width: 33%;
+}
+
+.imgUrlClass4{
+  width: 24%;
+}

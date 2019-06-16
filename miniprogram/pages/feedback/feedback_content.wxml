@@ -1,0 +1,19 @@
+<!--miniprogram/pages/feedback/feedback_content.wxml-->
+<view class="weui_cells">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">反馈</view>   
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <input placeholder='请填写10个字以上的描述'></input>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">相关截图（选填）</view>   
+      </view>
+      <image src='{{addpic}}' class='img' bindtap='upload'></image>
+    </view>
+</view>
+<view style='height:100rpx'></view>
+<button class='btn'>提交</button>

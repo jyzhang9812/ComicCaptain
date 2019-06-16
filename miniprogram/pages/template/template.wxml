@@ -1,0 +1,8 @@
+<!--miniprogram/pages/template/template.wxml-->
+<view class='comic_card' bindtap='bindCatalog'>
+  <image src='{{cover_list}}' mode='scaleToFill'class='card_image'></image>
+  <view class='text-group'>
+    <text class='icon_text'>{{comicName}}</text>
+    <text class='tag'>{{classify}}</text>
+  </view>
+</view>

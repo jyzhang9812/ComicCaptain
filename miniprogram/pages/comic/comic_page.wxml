@@ -1,0 +1,37 @@
+<!--miniprogram/pages/comic/comic_page.wxml-->
+<view class='container'>
+  <view class="b1" catchtouchmove='true' hidden="{{flag}}">
+    <view class="t_w">
+      <view class="t_image">
+        <image class="t_image1" src="{{t_image}}"></image>
+      </view>
+      <view class="b2">
+        <view class="v1">请购买此漫画观看本章~</view>
+        <view class="btn1" bindtap="pay">
+          <p class="p1">金币购买：{{price}}金币</p>
+        </view>
+        <view class="btn2" bindtap="bindCatalog">
+          <p class="p1">返回目录</p>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='width:100%;'>
+    <image src='{{content}}' style='width:100%;' mode='widthFix'></image>
+  </view>
+  <view class='bottomBar'>
+    <button class='btn' bindtap='bindCatalog'>
+      <image class='icon' src='{{category}}'></image>
+      目录
+    </button>
+    <button class='btn' bindtap='pre'>
+      <image class='icon' src='{{pre}}' ></image>
+      上一话
+    </button>
+    <button class='btn' bindtap='next'>
+      下一话
+      <image class='icon' src='{{next}}'></image>
+    </button>
+  </view>
+</view>

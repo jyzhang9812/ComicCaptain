@@ -1,0 +1,55 @@
+<!--pages/pulish/pulish.wxml-->
+<view class='container'>
+  <view> 
+    <view class='input_view'>
+      <text>漫画名：</text>
+      <textarea class='input' bindinput='titleInput' placeholder-style='margin-left:20rpx;' maxlength='500' value='{{title}}' placeholder='请输入漫画名' auto-focus auto-height></textarea>
+    </view>
+    <view class='input_view'>
+      <text>作者：</text>
+      <textarea class='input' bindinput='authorInput' placeholder-style='margin-left:20rpx;' maxlength='500' value='{{author}}' placeholder='请输入作者名' auto-focus auto-height></textarea>
+    </view>
+    <view class='input_view'>
+      <text>地区：</text>
+      <radio-group style="width:210px;" bindchange="radioChange">
+        <label class="radio" wx:for="{{countrys}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />
+          {{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='input_view'>
+      <text>分类：</text>
+      <checkbox-group style="width:210px;" bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{tags}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+          {{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='input_view'>
+      <text>权限：</text>
+      <textarea class='input' bindinput='lockInput' placeholder-style='margin-left:20rpx;' maxlength='500' value='{{lock_page}}' placeholder='付费起始章节' auto-focus auto-height></textarea>
+    </view>
+    <view class='input_view'>
+      <text>价格：</text>
+      <textarea class='input' bindinput='priceInput' placeholder-style='margin-left:20rpx;' maxlength='500' value='{{prices}}' placeholder='请输入金币数' auto-focus auto-height></textarea>
+    </view>
+    <view class='input_view'>
+      <text>简介：</text>
+      <textarea class='input' bindinput='introInput' placeholder-style='margin-left:20rpx;' maxlength='500' value='{{intro}}' placeholder='请输入漫画简介' auto-focus auto-height></textarea>
+    </view>
+  </view>
+
+  <view class='btm flexSpaceBet w100 publishItem'>
+    <!--  wx:for='{{imgUrl}}' -->
+    <view class='flexCenter w100' wx:if='{{imgUrl}}'>
+      <!-- <view  wx:for='{{imgUrl}}' class='{{imgUrl.length == 1? "imgUrlClass1": imgUrl.length == 2? "imgUrlClass2": imgUrl.length == 3? "imgUrlClass3": "imgUrlClass4"}}' > -->
+        <image src='{{imgUrl}}' class='w100'  mode="aspectFit" ></image>
+      <!-- </view> -->     
+    </view>
+    <image src='{{addpic}}' class='pic' bindtap='doUpload'></image>
+    <view class='pulishBtn' bindtap='pulish'> 发布</view> 
+  </view>
+
+</view>

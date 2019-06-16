@@ -1,0 +1,24 @@
+/* miniprogram/pages/feedback/feedback_content.wxss */
+@import "../../style/weui-cell.wxss";
+page{
+  font-size: 30rpx;
+  background-color:#e7e7e7; 
+}
+text{
+  padding:10px 15px;
+}
+input{
+  padding: 10px 15px;
+  height: 300rpx;
+  white-space: wrap;
+  text-align: left;
+}
+.img{
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10px 15px;
+}
+.btn{
+  background-color: rgb(13, 170, 13);
+  color: white;
+}

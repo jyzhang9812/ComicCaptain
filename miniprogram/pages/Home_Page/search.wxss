@@ -1,0 +1,8 @@
+/* miniprogram/pages/Home_Page/search.wxss */
+@import 'update.wxss';
+.search_txt{
+  margin-top: 30rpx;
+  color: #777777;
+  font-size:35rpx;
+  text-align: center;
+}

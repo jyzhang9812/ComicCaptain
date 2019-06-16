@@ -1,0 +1,9 @@
+<!--miniprogram/pages/upload/manage_upload.wxml-->
+<view class='upload_list'>
+  <button class='upload_btn' bindtap='doUpload'>上传章节</button> 
+  <view class='chapter'>
+    <view class="num_card" wx:for="{{numlist}}" wx:for-item="num" data-index='{{num.index-1}}' wx:key="{{num}}" data-page='{{num.num}}' bindtap='bindPage'>
+      <text>{{num.index}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,107 @@
+<!--miniprogram/pages/comic/comic_catagory.wxml-->
+<view class='container'>
+
+  <view class='blur' style="background-image: url({{comic_list.img}})"></view>
+
+  <view class='all_info'> 
+
+    <view class='left'>
+      <image class='cover' src='{{comic_list.img}}'></image>
+    </view>
+
+    <view class='comicInfo'>
+      <text space='esmp'class='title'>{{comic_list.title}}</text>
+      <view>
+        <block wx:for="{{comic_list.num}}">
+          <image class='icon' src='{{star_full}}'></image>
+        </block>
+        <block wx:for="{{5-comic_list.num}}">
+          <image class='icon' src='{{star}}'></image>
+        </block>
+      </view>
+      <text>作者：{{comic_list.author}}</text>
+      <text>状态：{{comic_list.state}}</text>
+      <text>地区：{{comic_list.country}}</text>
+      <text>分类：{{comic_list.tag}}</text>
+    </view>
+  </view>
+
+  <view class='btn-group'>
+    <button class='btn' bindtap='collect'>
+      <image class='icon' src='{{collected}}'></image>
+      收藏
+    </button>
+    <button class='btn' bindtap="modalinput">
+      <image class='icon' src='{{score}}'></image>
+      评分
+    </button>
+  </view>
+  
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+      简介
+    </view>
+
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+      目录
+    </view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+    <swiper-item>
+      <!--简介-->
+      <view class='intro'>
+        <text class='icon_text'>{{comic_list.intro}}</text>
+      </view>
+      <view class='comment'>
+        <view class='comment_title'>
+          <text>精彩漫评</text>
+          <text style='color:#ffbf35;font-size:30rpx' bindtap="bindButtonTap">写评论</text>
+        </view>
+        <view class='comment_card'>
+          <view style='width: 20%;'>
+            <image class='headPortrait' src='{{avatarUrl}}'></image>
+          </view>
+          <view class='name-info'>
+              <text>{{nickname}}</text>
+              <text style='font-size:30rpx'>2019-6-13{{date}}</text>
+            <text class='icon_text'>{{comment}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='search_box'>
+        <input placeholder="为了热评第一冲呀~！" focus="{{focus}}" />
+        <image src='{{send}}' class='icon0' bindtap='comment'></image> 
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+       <!--目录--><scroll-view>
+      <view class='catalog'>
+        <view class='headnote'>
+          <text>{{comic_list.state}}</text>
+          <image src='{{down}}' class='icon' bindtap='bindDown'></image>
+        </view>
+        <view class='chapter'>
+          <view class="num_card  {{(num.index < lock_num)||ispay ? '' : 'lock'}}" wx:for="{{numlist}}" wx:for-item="num" data-index='{{num.index-1}}' wx:key="{{num}}" data-page='{{num.num}}' bindtap='bindPage'>
+            <text>{{num.index}}</text>
+            <image style="display:{{num.index < lock_num ? 'none' : 'block'}}" src="{{ispay?unlock_icon:lock_icon}}" class='icon' bindtap='bindDown'></image>
+          </view>
+        </view>
+      </view></scroll-view>
+    </swiper-item>
+
+  </swiper>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="喜欢吗？打个分吧" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm"> 
+  <view style='display:flex;justify-content:space-around'>
+    <block wx:for="{{one_2}}" wx:key="index">
+      <image class='icon_star' catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='{{star_full}}'></image>
+    </block>
+    <block wx:for="{{two_2}}" wx:key="index">
+      <image  class='icon_star' catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='{{star}}'></image>
+    </block>
+    <text>{{one_2}}星</text>
+  </view>
+</modal>

@@ -1,0 +1,9 @@
+/* miniprogram/pages/upload/manage_upload.wxss */
+@import '../Home_Page/my_info.wxss';
+.continue{
+  border: 3rpx solid red;
+}
+.continue:hover{
+  background-color:red;
+  color: white; 
+}

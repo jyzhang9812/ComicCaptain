@@ -1,0 +1,23 @@
+<!--miniprogram/pages/Home_Page/search.wxml-->
+<!--miniprogram/pages/Home_Page/update.wxml-->
+<view class='container'>
+  <view class='search_box'>
+    <icon type='search' color='#ffbf33' size='15'></icon>
+    <input confirm-type="search" maxlength="30" bindinput='wxSearchInput' value='{{key}}' bindconfirm='wxSearchFn' bindfocus="wxSerchFocus" bindblur="wxSearchBlur" placeholder='请输入作品名...'></input>
+  </view>
+  <view wx:if='{{notFound}}'>
+    <view class='search_txt'>暂无匹配结果，请重新输入</view>
+  </view>
+  <view wx:else>
+    <view class='search_txt'>搜索结果如下：</view>
+    <view class='card_group'>
+      <view class='comic_card' wx:for='{{comic_list}}' bindtap='bindCatalog' data-postId='{{comic._id}}' wx:for-item='comic'>
+        <image src='{{comic.img}}' mode='scaleToFill' class='card_image'></image>
+        <view class='text-group'>
+          <text class='icon_text'>{{comic.title}}</text>
+          <text class='tag'>{{comic.tag}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

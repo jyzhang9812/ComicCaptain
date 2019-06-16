@@ -1,0 +1,12 @@
+<!--miniprogram/pages/feedback/feedback_index.wxml-->
+<view class='container'>
+  <view class='text'>
+    <text>请选择反馈内容</text>
+  </view>
+  <view class="weui-cells weui-cells_after-title" wx:for="{{text_title}}">
+    <navigator url="../feedback/feedback_content" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-index='{{index}}'>
+      <view class="weui-cell__bd">{{item}}</view>
+      <image class='icon' src='{{navigate}}'></image>       
+    </navigator>
+  </view>
+</view>

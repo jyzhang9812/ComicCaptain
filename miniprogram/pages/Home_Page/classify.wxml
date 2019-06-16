@@ -1,0 +1,156 @@
+<view class="bg-white" >
+ <van-tabs swipeable color="#ffbf35">
+  <van-tab title="连载">
+    <van-tabs swipeable color="#50b8ee">
+     <van-tab title="热血">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type1}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="冒险">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type2}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="催泪">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type3}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="校园">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type4}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="搞笑">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type5}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="日常">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type6}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+   </van-tabs>
+  </van-tab>
+  <van-tab title="完结">
+    <van-tabs swipeable color="#50b8ee">
+     <van-tab title="热血">
+     <view wx:if='{{type22==[]}}'>
+        <text>该分类下暂无数据</text>
+      </view>
+      <view wx:else class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type21}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="冒险">
+      <view wx:if='{{isnull}}'>
+        <text>该分类下暂无数据</text>
+      </view>
+      <view wx:else class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type22}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="催泪">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type23}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="校园">
+      <view wx:if='{{isnull}}'>
+        <text>该分类下暂无数据</text>
+      </view>
+      <view wx:else class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type24}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="搞笑">
+      <view class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type25}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+     <van-tab title="日常">
+      <view wx:if='{{isnull}}'>
+        <text>该分类下暂无数据</text>
+      </view>
+      <view wx:else class='card_group'>
+        <view class='comic_card' wx:key='{{comic._id}}' wx:for='{{type26}}' bindtap='bindCatalog' data-id='{{comic._id}}' wx:for-item='comic'>
+          <image src='{{comic.img}}' mode='aspectFill' class='card_image'></image>
+          <view class='text-group'>
+            <text class='icon_text'>{{comic.title}}</text>
+            <text class='tag'>{{comic.tag}}</text>
+          </view>
+        </view>
+      </view>
+     </van-tab>
+   </van-tabs>
+  </van-tab>
+</van-tabs>
+</view>

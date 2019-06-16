@@ -1,0 +1,16 @@
+/* miniprogram/pages/feedback/feedback_index.wxss */
+@import "../../style/weui-cell.wxss";
+page{
+  background-color:#e7e7e7 
+}
+.container{
+  display: block;
+}
+.text{
+  color: #7f7f7f;
+  padding:10px 15px;
+}
+.icon{
+    width:50rpx;
+    height:50rpx;
+}

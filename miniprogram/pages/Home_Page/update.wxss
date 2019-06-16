@@ -1,0 +1,2 @@
+/* miniprogram/pages/Home_Page/update.wxss */
+@import 'home.wxss';

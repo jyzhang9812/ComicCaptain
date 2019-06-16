@@ -1,0 +1,107 @@
+<!--miniprogram/pages/Home_Page/my_info.wxml-->
+<view class='container' style="background-image: url('https://636f-comic-bfef61-1258865248.tcb.qcloud.la/bcg.jpg?sign=719e2180a5b4de5f0df58e68cb9bba8a&t=1557055576');background-size: cover">
+  <view class='all-info'>
+    <view>
+      <image class='headPortrait' src='{{avatarUrl}}'></image>
+    </view>
+    <view class='name-info'>
+        <text>{{nickname}}</text>
+        <text style='font-size:30rpx'>金币：{{coin}}</text>
+    </view>
+    <view class='btn-s'>
+      <view class='btn' bindtap='sign' disabled='isSign?true:false'>
+        <image class='icon' src='{{sign}}'></image>
+        <text>{{text}}</text>
+      </view>
+      <navigator url='../feedback/feedback_index'>
+        <image class='icon' src='{{edit}}'></image>
+        <text>反馈</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="swiper-tab">
+
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+      我的上传
+    </view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+      收藏夹
+    </view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+      阅读历史
+    </view>
+
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <!--我的上传-->
+    <swiper-item>
+      <view class='upload_list'>
+        <button class='upload_btn' bindtap='bindupload'>上传文件</button> 
+        <view class='rank_list'>
+          <view class='rank_card' wx:key='{{comic._id}}' wx:for='{{upload_list}}' wx:for-item='comic' bindtap='bindSetting' data-postid='{{comic._id}}'>
+            <image class='cover' src='{{comic.img}}' mode='aspectFill'></image>
+            <view class='comicInfo'>
+              <view class='title'>
+                <text class='icon_text'>{{comic.title}}</text>
+                <image class='like' src='{{setting}}'></image>
+              </view>
+              <view class='progress_info'>
+                <view class='progress'>
+                  <text class='tag'>上传至：第{{comic.chapter.length}}话</text>
+                </view>
+                <button class='continue'>章节</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> 
+    </swiper-item>
+
+    <!--收藏-->
+    <swiper-item>
+      <view style='width:100%'>
+        <view class='rank_list'>
+          <view class='rank_card' wx:key='{{comic._id}}' wx:for='{{save_list}}' wx:for-item='comic'>
+            <image class='cover' src='{{comic.img}}' mode='aspectFill'></image>
+            <view class='comicInfo'>
+              <view class='title'>
+                <text class='icon_text'>{{comic.title}}</text>
+                <image class='like' src='{{collect}}' bindtap='collect' data-index='{{index}}'></image>
+              </view>
+              <view class='progress_info'>
+                <view class='progress'>
+                  <text class='tag'>更新至：第{{comic.chapter.length}}话</text>
+                </view>
+                <button class='continue' bindtap='bindPage' data-cid='{{comic._id}}' data-index='{{comic.chapter.length}}' data-page='{{comic.chapter}}'>抢看</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    
+    <!--历史-->
+    <swiper-item> 
+      <view style='width:100%'>
+        <view class='rank_list'>
+          <view class='rank_card' wx:key='{{history_comic._id}}' wx:for='{{history_comic}}' wx:for-item='history_comic' data-cid='{{history_comic._id}}' data-index='{{history_comic.clength}}' data-page='{{history_comic.chapter}}' bindtap='bindPage'>
+            <image class='cover' src='{{history_comic.img}}' mode='aspectFill'></image>
+            <view class='comicInfo'>
+              <view class='title'  style='width:100%'>
+                <text class='icon_text'>{{history_comic.title}}</text>
+                <text class='date'>{{date}}</text>
+              </view>
+              <view class='progress_info'>
+                <view class='progress'>
+                  <text class='tag'>阅读至：第1话</text>
+                  <progress color='#50b8ee' stroke-width='5rpx' percent='25'></progress>
+                </view>
+                <button class='continue'>续看</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
