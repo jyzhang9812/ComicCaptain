@@ -3,7 +3,7 @@
 
 #### 主页面
 <center>
-  <img src="images/1.jpg" width="25%" height="25%" />
+  <img src="images/1.png" width="25%" height="25%" />
   Figure 1. 主页面
 </center>
 
@@ -16,14 +16,14 @@
 #### 排行榜
  
 <center>
-  <img src="images/3.jpg" width="25%" height="25%" />
+  <img src="images/3.png" width="25%" height="25%" />
   Figure 3. 排行榜界面
 </center>
 
 #### 搜索
  
 <center>
-  <img src="images/3.jpg" width="25%" height="25%" />
+  <img src="images/4.png" width="25%" height="25%" />
   Figure 4. 搜索界面
 </center>
 
@@ -32,15 +32,15 @@
 通过ArrayAdapter（数组适配器）与Spinner相结合，在添加课程的布局中实现单双周的下拉列表显示，再结合点击事件，在用户点击“完成”按钮后，若是所有信息输入无误，则这些添加的数据将被传到数据库，再通过putExtra实现AddCourseActivity与MainActivity间的课程信息传递。课程信息传递后，在MainActivity中创建课程表视图，实现新添加的课程信息的实时显示。其中，单个课程布局的高度是根据课程时间差值计算得到。若是信息填写出错或是基本信息未填写完整，通过Toast对用户的不合法信息输入进行提示。
 <div display="flex" flex-direction="row" width="100%">
   <div display="flex" flex-direction="column">
-    <img src="images/5.jpg" width="25%" height="25%" />
+    <img src="images/5.png" width="25%" height="25%" />
     <p>Figure 5. 漫画简介</p>
   </div>
   <div display="flex" flex-direction="column">
-    <img src="images/6.jpg" width="25%" height="25%" />
+    <img src="images/6.png" width="25%" height="25%" />
     <p>Figure 6. 漫画目录</p>
   </div>
   <div display="flex" flex-direction="column">
-    <img src="images/4.jpg" width="25%" height="25%" />
+    <img src="images/7.png" width="25%" height="25%" />
     <p>Figure 7. 漫画页</p>
   </div>
 </div>
@@ -48,7 +48,7 @@
 #### 个人界面   
 <div display="flex" flex-direction="row" width="100%">
   <div display="flex" flex-direction="column">
-    <img src="images/8.jpg" width="25%" height="25%" />
+    <img src="images/8.png" width="25%" height="25%" />
     <p>Figure 8. 我的上传</p>
   </div>
 </div>
@@ -62,7 +62,7 @@
     <p>Figure 10. 历史纪录</p>
   </div>
   <div display="flex" flex-direction="column">
-    <img src="images/11.jpg" width="25%" height="25%" />
+    <img src="images/11.png width="25%" height="25%" />
     <p>Figure 11. 反馈</p>
   </div>
 </div>
