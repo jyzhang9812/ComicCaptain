@@ -62,7 +62,7 @@
     <p>Figure 10. 历史纪录</p>
   </div>
   <div display="flex" flex-direction="column">
-    <img src="images/11.png width="25%" height="25%" />
+    <img src="images/11.png" width="25%" height="25%" />
     <p>Figure 11. 反馈</p>
   </div>
 </div>
